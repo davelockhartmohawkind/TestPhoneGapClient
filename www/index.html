@@ -150,18 +150,21 @@
                     'Game Over',            // title
                     'Done'                  // buttonName
                 );
+                navigator.app.exitApp();
             }
 
             // Beep three times
             //
             function playBeep() {
                 navigator.notification.beep(3);
+                navigator.app.exitApp();
             }
 
             // Vibrate for 2 seconds
             //
             function vibrate() {
                 navigator.notification.vibrate(2000);
+                navigator.app.exitApp();
             }
             
 			document.addEventListener('deviceready', onDeviceReady, true);
