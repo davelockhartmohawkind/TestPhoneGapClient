@@ -22,7 +22,7 @@
                                     'Device UUID: ' + device.uuid + '<br />' +
                                     'Device Model: ' + device.model + '<br />' +
                                     'Device Version: ' + device.version + '<br />');
-                navigator.notification.beep(2);
+                
 
                 
 				document.addEventListener("backbutton", function(e)
@@ -141,6 +141,28 @@
             function errorHandler (error) {
                 $("#app-status-ul").append('<li>error:'+ error +'</li>');
             }
+
+            // Show a custom alert
+            //
+            function showAlert() {
+                navigator.notification.alert(
+                    'You are the winner!',  // message
+                    'Game Over',            // title
+                    'Done'                  // buttonName
+                );
+            }
+
+            // Beep three times
+            //
+            function playBeep() {
+                navigator.notification.beep(3);
+            }
+
+            // Vibrate for 2 seconds
+            //
+            function vibrate() {
+                navigator.notification.vibrate(2000);
+            }
             
 			document.addEventListener('deviceready', onDeviceReady, true);
 
@@ -152,5 +174,10 @@
 				</ul>
 			</div>
 		</div>
+        <div>
+                <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+                <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
+                <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
+         </div>
     </body>
 </html>
