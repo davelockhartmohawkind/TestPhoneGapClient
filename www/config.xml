@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.mohawkind.phonegapAPNS"
-        version   = "0.0.12" >
+        version   = "0.0.13" >
 
     <name>PhoneGapTestClient</name>
 
@@ -21,7 +21,7 @@
     <preference name="MySetting" value="true" />
     <plugins>
       <!--<plugin name="Notification" value="CDVNotification" />-->
-      <plugin name="Notification" value="org.apache.cordova.Notification"/>
+      <plugin name="notification" value="org.apache.cordova.Notification"/>
     </plugins>
     <!--<access origin="*" />-->
   </cordova>
@@ -31,12 +31,12 @@
     -->
     <feature name="http://api.phonegap.com/1.0/device" />
 
-  <feature name="Notification">
+  <!--<feature name="Notification">
     <param name="ios-package" value="CDVNotification" />
   </feature>
   <feature name="LocalStorage">
     <param name="ios-package" value="CDVLocalStorage"/>
-  </feature>
+  </feature>-->
 
 
   <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
