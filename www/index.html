@@ -147,11 +147,16 @@
             function showAlert() {
                 navigator.notification.alert(
                     'You are the winner!',  // message
-                    alertdismissed,
+                    alertDismissed,
                     'Game Over',            // title
                     'Done'                  // buttonName
                 );
                 navigator.app.exitApp();
+            }
+
+            // alert dialog dismissed
+            function alertDismissed() {
+                // do something
             }
 
             // Beep three times
