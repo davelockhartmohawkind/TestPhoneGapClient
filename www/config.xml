@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.mohawkind.phonegapAPNS"
-        version   = "0.0.10" >
+        version   = "0.0.11" >
 
     <name>PhoneGapTestClient</name>
 
@@ -16,6 +16,14 @@
         Mohawk Mobile Team
     </author>
 
+
+  <cordova>
+    <preference name="MySetting" value="true" />
+    <plugins>
+      <plugin name="Notification" value="CDVNotification" />
+    </plugins>
+    <!--<access origin="*" />-->
+  </cordova>
     <!--
         Enable individual API permissions here.
         The "device" permission is required for the 'deviceready' event.
@@ -25,8 +33,16 @@
   <feature name="Notification">
     <param name="ios-package" value="CDVNotification" />
   </feature>
+  <feature name="LocalStorage">
+    <param name="ios-package" value="CDVLocalStorage"/>
+  </feature>
 
-    <!--
+
+  <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
+  <content src="index.html" />
+
+
+  <!--
         If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
