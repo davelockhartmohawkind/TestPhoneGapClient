@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.mohawkind.phonegapAPNS"
-        version   = "0.0.11" >
+        version   = "0.0.12" >
 
     <name>PhoneGapTestClient</name>
 
@@ -20,7 +20,8 @@
   <cordova>
     <preference name="MySetting" value="true" />
     <plugins>
-      <plugin name="Notification" value="CDVNotification" />
+      <!--<plugin name="Notification" value="CDVNotification" />-->
+      <plugin name="Notification" value="org.apache.cordova.Notification"/>
     </plugins>
     <!--<access origin="*" />-->
   </cordova>
