@@ -21,7 +21,7 @@ var PushNotification = function() {
 			return;
 		}
 		alert("calling cordova.exec");
-		cordova.exec(successCallback, errorCallback, "PushPlugin", "register", ["options"]);
+		alert(cordova.exec(successCallback, errorCallback, "PushPlugin", "register", ["options"]));
 		alert("finished calling cordova.exec");
 	    }
 		catch(err) 
